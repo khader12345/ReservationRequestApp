@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace Assignment3.BusinessLogic
 {
-    internal class RequestStatus
+    public enum RequestStatus
     {
+        Accepted,
+        Rejected,
+        Pending
     }
 }

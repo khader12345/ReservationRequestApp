@@ -11,6 +11,6 @@ namespace Assignment3.BusinessLogic
         HollowSquare,
         Ushape,
         Classroom,
-        Auditorium,
+        Auditorium
     }
 }
