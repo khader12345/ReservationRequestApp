@@ -57,9 +57,25 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Images\auditorium_icon.png" />
+	  <None Remove="Resources\Images\Auditorium_img.jpg" />
+	  <None Remove="Resources\Images\banquet_icon.png" />
+	  <None Remove="Resources\Images\classroom_icon.png" />
+	  <None Remove="Resources\Images\Classroom_img.png" />
+	  <None Remove="Resources\Images\Hollowsqaure_img.jpg" />
+	  <None Remove="Resources\Images\hollowsquare_icon.png" />
+	  <None Remove="Resources\Images\ushape_icon.png" />
+	  <None Remove="Resources\Images\Ushape_img.jpg" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="BusinessLogic\" />
 	</ItemGroup>
 
 </Project>
