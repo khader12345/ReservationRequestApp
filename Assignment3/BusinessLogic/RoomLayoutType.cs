@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace Assignment3.BusinessLogic
 {
-    internal class RoomLayoutType
+    public enum RoomLayoutType
     {
+        HollowSquare,
+        Ushape,
+        Classroom,
+        Auditorium,
     }
 }
