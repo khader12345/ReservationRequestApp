@@ -72,7 +72,7 @@ namespace Assignment3.BusinessLogic
                 _startTime = value;
             }
         }
-        public DateTime Endtime
+        public DateTime EndTime
         {
             get => _endTime;
             set
