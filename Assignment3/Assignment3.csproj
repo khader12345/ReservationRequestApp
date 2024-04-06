@@ -58,14 +58,14 @@
 
 	<ItemGroup>
 	  <None Remove="Resources\Images\auditorium_icon.png" />
-	  <None Remove="Resources\Images\Auditorium_img.jpg" />
+	  <None Remove="Resources\Images\auditorium_img.jpg" />
 	  <None Remove="Resources\Images\banquet_icon.png" />
 	  <None Remove="Resources\Images\classroom_icon.png" />
-	  <None Remove="Resources\Images\Classroom_img.png" />
-	  <None Remove="Resources\Images\Hollowsqaure_img.jpg" />
+	  <None Remove="Resources\Images\classroom_img.png" />
+	  <None Remove="Resources\Images\hollowsqaure_img.jpg" />
 	  <None Remove="Resources\Images\hollowsquare_icon.png" />
 	  <None Remove="Resources\Images\ushape_icon.png" />
-	  <None Remove="Resources\Images\Ushape_img.jpg" />
+	  <None Remove="Resources\Images\ushape_img.jpg" />
 	</ItemGroup>
 
 	<ItemGroup>
