@@ -29,7 +29,7 @@ public partial class AddRequestPage : ContentPage
 
             if (participantCount > _selectedRoom.SeatingCapacity)
             {
-                DisplayAlert("Error", "The selected room cannot accommodate the number of participants.", "OK");
+                DisplayAlert("Error", "The chosen room does not have capacity for the expected number of attendees.", "OK");
                 return;
             }
 
