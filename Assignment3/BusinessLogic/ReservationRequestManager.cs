@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using static Android.Provider.DocumentsContract;
 
 namespace Assignment3.BusinessLogic
 {
@@ -25,8 +22,8 @@ namespace Assignment3.BusinessLogic
 
         public void AddMeetingRoom(string roomNumber, int seatingCapacity, string roomImageFile, RoomLayoutType roomLayoutType)
         {
-            MeetingRoom foundRoom = _meetingRooms.FirstOrDefault(room => room.RoomNumber == tempRoom.RoomNumber);
-            if (foundRoom == null)
+            
+            if (_meetingRooms.Any(room => room.RoomNumber == roomNumber))
             {
                 throw new ArgumentException("A room with the same room number already exists. ");
             }

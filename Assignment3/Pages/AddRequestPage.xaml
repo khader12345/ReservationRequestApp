@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Assignment3.Pages.AddRequestPage">
+
+    <Grid ColumnDefinitions="*,*,*"
+          RowDefinitions="*,*,*,*,*,3*,*,*,*,*,*,*,2*,*">
+
+        <Label Text="Add Reservation Request"
+               Grid.Column="0"
+               Grid.Row="0"
+               Grid.ColumnSpan="3"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"
+               FontAttributes="Bold"
+               FontSize="Medium"
+               TextColor="MediumPurple"/>
+
+        <Label Grid.Column="1" 
+               Grid.Row="2"
+               Text="Requested By:"
+               FontAttributes="Bold"
+               TextColor="MediumPurple"
+               VerticalOptions="Center"/>
+
+        <Entry Grid.Column="1" 
+               Grid.Row="3"
+               Grid.ColumnSpan="2"
+               x:Name="UserNameEntry" 
+               VerticalOptions="Center"
+               Placeholder="Enter your name" />
+
+        <Label Grid.Column="1" 
+               Grid.Row="4"
+               VerticalOptions="Center"
+               FontAttributes="Bold"
+               TextColor="MediumPurple"
+               Text="Description:" />
+
+        <Editor Grid.Column="1" 
+                Grid.Row="5"
+                Grid.ColumnSpan="2"
+                HeightRequest="100"
+                x:Name="DescriptionEntry" 
+                VerticalOptions="Start"
+                Placeholder="Enter meeting description" />
+
+        <Label Grid.Column="1" 
+               Grid.Row="6"
+               VerticalOptions="Center"
+               FontAttributes="Bold"
+               TextColor="MediumPurple"
+               Text="Meeting Date:" />
+
+        <DatePicker Grid.Column="1" 
+                    Grid.Row="7"
+                    x:Name="MeetingDatePicker" />
+
+        <Label Grid.Column="1" 
+               Grid.Row="8"
+               VerticalOptions="Center"
+               FontAttributes="Bold"
+               TextColor="MediumPurple"
+               Text="Start Time (HH:MM AM/PM):" />
+
+        <TimePicker Grid.Column="1"
+                    Grid.Row="9"
+                    x:Name="StartTimePicker" />
+
+        <Label Grid.Column="2" 
+               Grid.Row="8"
+               VerticalOptions="Center"
+               FontAttributes="Bold"
+               TextColor="MediumPurple"
+               Text="End Time (HH:MM AM/PM):" />
+
+        <TimePicker Grid.Column="2" 
+                    Grid.Row="9"
+                    Time="{Binding StartTimePicker, Mode=TwoWay}"
+                    x:Name="EndTimePicker" />
+
+        <Label Grid.Column="1" 
+               Grid.Row="10"
+               VerticalOptions="Center"
+               FontAttributes="Bold"
+               TextColor="MediumPurple"
+               Text="Participant Count:" />
+
+        <Entry Grid.Column="1" 
+               Grid.Row="11"
+               Grid.ColumnSpan="2"
+               x:Name="ParticipantCountEntry" 
+               VerticalOptions="Center"
+               Placeholder="Enter number of participants" 
+               Keyboard="Numeric"/>
+
+        <Button Grid.Row="12"
+                Grid.Column="1"
+                Text="Add Request"
+                Clicked="OnAddRequestClicked"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"/>
+
+        <Button Grid.Row="12"
+                Grid.Column="2"
+                Text="Back To Rooms"
+                Clicked="OnBackToRoomsClicked"
+                VerticalOptions="Center"
+                HorizontalOptions="Start"/>
+
+        <Image Grid.Row="3"
+               Grid.RowSpan="4"
+               Grid.Column="0"
+               Source="{Binding Path=RoomImageFile}"
+               />
+
+        <Label Grid.Row="9"
+               Grid.Column="0"
+               Text="{Binding Path=RoomNumber}"
+               FontAttributes="Bold"
+               TextColor="MediumPurple"
+               VerticalOptions="Center"
+               HorizontalOptions="Center"
+               />
+
+        <Label Grid.Row="10"
+               Grid.Column="0"
+               Text="{Binding DisplayText}"
+               VerticalOptions="Center"
+               HorizontalOptions="Center"
+               FontAttributes="Bold"
+               TextColor="MediumPurple"
+               />
+
+    </Grid>
+        
+</ContentPage>
