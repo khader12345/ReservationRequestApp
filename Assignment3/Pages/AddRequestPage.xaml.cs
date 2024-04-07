@@ -34,11 +34,12 @@ public partial class AddRequestPage : ContentPage
             }
 
             _reservationRequestManager.AddReservationRequest(requestedBy, description, meetingDate, startTime, endTime, participantCount, tempRoom);
-            DisplayAlert("Success", "Your reservation request has been added.", "OK");
+            DisplayAlert("Success", "Your reservation has been successfully registered. ", "OK");
+
         }
         catch (Exception ex)
         {
-            DisplayAlert("Error while making request", ex.Message, "Ok");
+            DisplayAlert("Error while making request", ex.Message, "OK");
         }
     }
 

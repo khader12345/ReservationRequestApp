@@ -66,7 +66,7 @@ namespace Assignment3.BusinessLogic
             {
                 if(value <= DateTime.Now) 
                 {
-                    throw new ArgumentException("The start date and the meeting time has to be in the future. ");
+                    throw new ArgumentException("The meeting time has to be in the future. ");
                 
                 }
                 _startTime = value;
