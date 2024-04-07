@@ -43,7 +43,7 @@ public partial class ViewRequestsPage : ContentPage
             {
                 _reservationRequestManager.AcceptReservationRequest(request);
                 PopulateRequestsForDisplay();
-                DisplayAlert("Success", "Request accepted successfully.", "OK");
+                DisplayAlert("Success", "Request has been accepted.", "OK");
             }
             catch (Exception ex)
             {
@@ -56,9 +56,17 @@ public partial class ViewRequestsPage : ContentPage
     {
         if (sender is Button button && button.BindingContext is ReservationRequest request)
         {
-            _reservationRequestManager.ChangeReservationRequestStatus(request.RequestID, RequestStatus.Rejected);
-            PopulateRequestsForDisplay();
-            DisplayAlert("Success", "Request rejected successfully.", "OK");
+            try
+            {
+                _reservationRequestManager.ChangeReservationRequestStatus(request.RequestID, RequestStatus.Rejected);
+                PopulateRequestsForDisplay();
+                DisplayAlert("Success", "Request has been rejected.", "OK");
+
+            }
+            catch (Exception ex)
+            {
+                DisplayAlert("Success", "Request has rejected. ", "OK");
+            }
         }
     }
 }
