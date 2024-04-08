@@ -36,7 +36,7 @@ public partial class PickRoomPage : ContentPage
         }
         else
         {
-            await DisplayAlert("Warning", "You must select a room first.", "OK");
+            await DisplayAlert("Warning!", "You must select a room first.", "OK");
         }
     }
 
@@ -48,7 +48,7 @@ public partial class PickRoomPage : ContentPage
         }
         else
         {
-            await DisplayAlert("Warning", "You must select a room first.", "OK");
+            await DisplayAlert("Warning!", "You must select a room first.", "OK");
         }
     }
 }

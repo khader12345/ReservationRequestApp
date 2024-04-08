@@ -40,7 +40,7 @@ namespace Assignment3.BusinessLogic
             {
                 if (string.IsNullOrEmpty(value))
                 {
-                    throw new ArgumentNullException("A name for the request is required. ");
+                    throw new ArgumentNullException("*a name for the request is required*");
                 }
                 _requestedBy = value;
             }
@@ -53,7 +53,7 @@ namespace Assignment3.BusinessLogic
             {
                 if(string.IsNullOrEmpty(value))
                 {
-                    throw new ArgumentNullException("A description must be provided. ");
+                    throw new ArgumentNullException("*a description must be provided*" );
                 }
                 _description = value;
             }
@@ -66,7 +66,7 @@ namespace Assignment3.BusinessLogic
             {
                 if(value <= DateTime.Now) 
                 {
-                    throw new ArgumentException("The meeting time has to be in the future. ");
+                    throw new ArgumentException("*The meeting time has to be in the future*");
                 
                 }
                 _startTime = value;
@@ -79,7 +79,7 @@ namespace Assignment3.BusinessLogic
             {
                 if(value <= _startTime)
                 {
-                    throw new ArgumentException("The meeting end time must be greater than the start time. ");  
+                    throw new ArgumentException("*The meeting end time must be greater than the start time*");  
                 }
                 _endTime = value;
             }
@@ -92,7 +92,7 @@ namespace Assignment3.BusinessLogic
             {
                 if(value <= 0)
                 {
-                    throw new ArgumentException("Number of participants must be more than 0. ");
+                    throw new ArgumentException("*Number of participants must be more than 0*");
                 }
                 _participantCount = value;
             }
