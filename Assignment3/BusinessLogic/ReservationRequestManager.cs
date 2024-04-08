@@ -92,7 +92,7 @@ namespace Assignment3.BusinessLogic
         {
             if (request == null)
             {
-                throw new ArgumentNullException(nameof(request), "Request cannot be null.");
+                throw new ArgumentNullException(nameof(request), "Invalid input");
             }
 
             if (request.StartTime >= request.EndTime)
