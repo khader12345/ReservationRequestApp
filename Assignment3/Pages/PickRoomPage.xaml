@@ -1,27 +1,37 @@
 <?xml version="1.0" encoding="utf-8" ?>
+<!-- Page for selecting a meeting room from a list. -->
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Assignment3.Pages.PickRoomPage"
              xmlns:local="clr-namespace:Assignment3.BusinessLogic">
 
+    <!-- Vertical stack layout to organize controls vertically. -->
     <VerticalStackLayout>
-        <Label
-            Text="Pick Meeting Room"
-            FontAttributes="Bold"
-            Style="{StaticResource TitleLabelStyle}"
-            />
+        <!-- Label to display the page title. -->
+        <Label Text="Pick Meeting Room"
+               FontAttributes="Bold"
+               Style="{StaticResource TitleLabelStyle}" />
+
+        <!-- Grid to define the layout of the list and image. -->
         <Grid ColumnDefinitions="*,*">
+            <!-- ListView to display a list of meeting rooms. -->
             <ListView x:Name="MeetingRoomListView"
                       Grid.Column="0"
                       ItemSelected="RoomImageSelected"
                       ItemsSource="{Binding MeetingRooms}"
                       SelectionMode="Single"
                       Style="{StaticResource MeetingRoomListViewStyle}">
+                <!-- Data template for each list item. -->
                 <ListView.ItemTemplate>
                     <DataTemplate>
+                        <!-- ViewCell used as a container for each item. -->
                         <ViewCell>
                             <Grid Padding="10" ColumnDefinitions="Auto, *">
-                                <Image Source="{Binding RoomTypeIcon}" HeightRequest="50" WidthRequest="50"/>
+                                <!-- Image showing the icon for room type. -->
+                                <Image Source="{Binding RoomTypeIcon}"
+                                       HeightRequest="50"
+                                       WidthRequest="50"/>
+                                <!-- Stack layout for room number and details. -->
                                 <VerticalStackLayout Grid.Column="1" Spacing="0">
                                     <Label Text="{Binding RoomNumber}"
                                            Style="{StaticResource RoomNumberLabelStyle}"/>
@@ -34,22 +44,23 @@
                 </ListView.ItemTemplate>
             </ListView>
 
-            <Image 
-                Grid.Column="1"
-                x:Name="RoomImage"
-                Source="{Binding Path=RoomFileName}"
-                Style="{StaticResource RoomImageStyle}"/>
-
+            <!-- Image that updates to show the selected room's picture. -->
+            <Image Grid.Column="1"
+                   x:Name="RoomImage"
+                   Source="{Binding Path=RoomFileName}"
+                   Style="{StaticResource RoomImageStyle}"/>
         </Grid>
 
-        <HorizontalStackLayout
-            Spacing="10" 
-            Padding="0,20,0,0" 
-            HorizontalOptions="Center">
+        <!-- Horizontal stack layout for buttons. -->
+        <HorizontalStackLayout Spacing="10" 
+                               Padding="0,20,0,0" 
+                               HorizontalOptions="Center">
+            <!-- Button to add a new reservation request. -->
             <Button x:Name="AddRequestButton" 
                     Text="Add Request"
                     Clicked="AddRequestButton_Clicked"
                     Style="{StaticResource ActionButtonStyle}"/>
+            <!-- Button to view existing reservation requests. -->
             <Button x:Name="ViewRequestsButton" 
                     Text="View Requests"
                     Clicked="ViewRequestButton_Clicked"
