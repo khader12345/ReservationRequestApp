@@ -50,6 +50,14 @@ namespace Assignment3.BusinessLogic
         {
             get { return $"Layout: {RoomLayoutType}, Capacity: {SeatingCapacity}"; }
         }
+        public string DisplayLayout
+        {
+            get { return $"Layout: {RoomLayoutType}"; }
+        }
+        public string DisplayCapacity
+        {
+            get { return $"Capacity: {SeatingCapacity}"; }
+        }
 
         public MeetingRoom(string roomNumber, int seatingCapacity, RoomLayoutType roomLayoutType)
         {

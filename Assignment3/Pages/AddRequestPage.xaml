@@ -18,7 +18,7 @@
 
         <Label Grid.Column="1" 
                Grid.Row="2"
-               Text="Requested By:"
+               Text="Requested by"
                FontAttributes="Bold"
                TextColor="MediumPurple"
                VerticalOptions="Center"/>
@@ -35,7 +35,7 @@
                VerticalOptions="Center"
                FontAttributes="Bold"
                TextColor="MediumPurple"
-               Text="Description:" />
+               Text="Description" />
 
         <Editor Grid.Column="1" 
                 Grid.Row="5"
@@ -50,7 +50,7 @@
                VerticalOptions="Center"
                FontAttributes="Bold"
                TextColor="MediumPurple"
-               Text="Meeting Date:" />
+               Text="Meeting Date" />
 
         <DatePicker Grid.Column="1" 
                     Grid.Row="7"
@@ -61,7 +61,7 @@
                VerticalOptions="Center"
                FontAttributes="Bold"
                TextColor="MediumPurple"
-               Text="Start Time (HH:MM AM/PM):" />
+               Text="Start Time " />
 
         <TimePicker Grid.Column="1"
                     Grid.Row="9"
@@ -72,7 +72,7 @@
                VerticalOptions="Center"
                FontAttributes="Bold"
                TextColor="MediumPurple"
-               Text="End Time (HH:MM AM/PM):" />
+               Text="End Time " />
 
         <TimePicker Grid.Column="2" 
                     Grid.Row="9"
@@ -84,7 +84,7 @@
                VerticalOptions="Center"
                FontAttributes="Bold"
                TextColor="MediumPurple"
-               Text="Participant Count:" />
+               Text="Participant Count" />
 
         <Entry Grid.Column="1" 
                Grid.Row="11"
@@ -125,12 +125,21 @@
 
         <Label Grid.Row="10"
                Grid.Column="0"
-               Text="{Binding DisplayText}"
+               Text="{Binding DisplayLayout}"
                VerticalOptions="Center"
                HorizontalOptions="Center"
                FontAttributes="Bold"
                TextColor="MediumPurple"
                />
+
+        <Label Grid.Row="11"
+       Grid.Column="0"
+       Text="{Binding DisplayCapacity}"
+       VerticalOptions="Center"
+       HorizontalOptions="Center"
+       FontAttributes="Bold"
+       TextColor="MediumPurple"
+       />
 
     </Grid>
         
