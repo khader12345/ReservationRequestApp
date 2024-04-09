@@ -43,7 +43,7 @@ namespace Assignment3.BusinessLogic
             // Checks if the room already exists by room number.
             if (_meetingRooms.Any(room => room.RoomNumber == roomNumber))
             {
-                throw new ArgumentException("A room with the same room number already exists.");
+                throw new ArgumentException("A room number duplicate has been detected. ");
             }
 
             // Creates a new room and adds it to the list.
@@ -69,13 +69,13 @@ namespace Assignment3.BusinessLogic
             // Validation of room existence.
             if (foundRoom == null)
             {
-                throw new ArgumentException("The requested room does not exist.");
+                throw new ArgumentException("The specified room could not be found. ");
             }
 
             // Validation of room capacity against participant count.
             if (participantCount > foundRoom.SeatingCapacity)
             {
-                throw new ArgumentException("The requested room cannot accommodate the number of participants.");
+                throw new ArgumentException("The selected room lacks sufficient capacity for the expected attendees. ");
             }
 
             // Create and add the new reservation request.
@@ -98,7 +98,7 @@ namespace Assignment3.BusinessLogic
             // Time range validation.
             if (endTime <= startTime)
             {
-                throw new ArgumentException("End time must be after start time.");
+                throw new ArgumentException("The end time should come later than the start time. ");
             }
 
             // Check for time conflicts with existing reservations.
@@ -128,7 +128,7 @@ namespace Assignment3.BusinessLogic
             }
             else
             {
-                throw new ArgumentException("Reservation request with the given ID not found.");
+                throw new ArgumentException("No reservation request matches the provided ID. ");
             }
         }
 
@@ -147,7 +147,7 @@ namespace Assignment3.BusinessLogic
             // Start time must be before the end time.
             if (request.StartTime >= request.EndTime)
             {
-                throw new ArgumentException("The start time must be before the end time.");
+                throw new ArgumentException("The start time needs to precede the end time. ");
             }
 
             // Room must be available during the requested time.

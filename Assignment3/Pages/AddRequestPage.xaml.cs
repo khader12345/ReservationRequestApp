@@ -37,7 +37,7 @@ public partial class AddRequestPage : ContentPage
             // Validate if the participant count does not exceed the room's capacity
             if (participantCount > _selectedRoom.SeatingCapacity)
             {
-                DisplayAlert("Error", "The chosen room does not have capacity for the expected number of attendees.", "OK");
+                DisplayAlert("Warning", "The chosen room does not have capacity for the expected number of attendees.", "OK");
                 return; // Exit the event handler if the validation fails
             }
 
